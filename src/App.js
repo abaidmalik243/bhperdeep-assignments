@@ -83,7 +83,9 @@ class App extends React.Component {
                 <th>Filter
                   <input type="text" placeholder="Search..." ref="searchText" name="searchText" />
                   <button onClick={this.searchHandler} >Go</button>
-                  <button>All</button>
+                  <button onClick={() => {
+                    this.setState({ searchText: '' })
+                  }}>All</button>
                 </th>
                 <th>Action</th>
               </tr>
